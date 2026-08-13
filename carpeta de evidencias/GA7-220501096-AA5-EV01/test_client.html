@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cliente de prueba - Evidencia GA7-AA5-EV01</title>
+  <style>body{font-family:Arial;padding:16px}form{margin-bottom:16px}input{display:block;margin:6px 0;padding:8px;width:320px}</style>
+</head>
+<body>
+  <h1>Cliente de prueba - Registro / Login</h1>
+
+  <section>
+    <h2>Registro</h2>
+    <form id="regForm">
+      <input id="regUsername" placeholder="Username" required />
+      <input id="regEmail" placeholder="Email" required />
+      <input id="regPassword" placeholder="Password" type="password" required />
+      <button type="submit">Registrar</button>
+    </form>
+    <pre id="regResult"></pre>
+  </section>
+
+  <section>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input id="loginEmail" placeholder="Email" required />
+      <input id="loginPassword" placeholder="Password" type="password" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <pre id="loginResult"></pre>
+  </section>
+
+  <script>
+    const API_BASE = 'http://localhost:8082/api';
+
+    document.getElementById('regForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('regUsername').value;
+      const email = document.getElementById('regEmail').value;
+      const password = document.getElementById('regPassword').value;
+      const res = await fetch(API_BASE + '/registro', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({username,email,password})
+      });
+      const json = await res.json();
+      document.getElementById('regResult').textContent = JSON.stringify({status:res.status,body:json}, null, 2);
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      const res = await fetch(API_BASE + '/login', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({email,password})
+      });
+      const json = await res.json();
+      document.getElementById('loginResult').textContent = JSON.stringify({status:res.status,body:json}, null, 2);
+    });
+  </script>
+</body>
+</html>
