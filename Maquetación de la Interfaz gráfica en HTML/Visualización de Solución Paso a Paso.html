@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución - GrigoriPerelmánApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-[Inter]">
+    <div class="container mx-auto max-w-4xl p-6">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-2xl font-bold text-blue-800 mb-2">Solución para: \(x^2 - 5x + 6 = 0\)</h1>
+            <div class="border-t border-gray-200 my-4"></div>
+            <div class="space-y-6">
+                <div class="step">
+                    <h2 class="text-lg font-semibold">Paso 1: Identificar coeficientes</h2>
+                    <p>La ecuación cuadrática \(ax^2 + bx + c = 0\) tiene coeficientes:</p>
+                    <p>\(a = 1\), \(b = -5\), \(c = 6\)</p>
+                </div>
+                <div class="step">
+                    <h2 class="text-lg font-semibold">Paso 2: Aplicar fórmula cuadrática</h2>
+                    <p>\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</p>
+                </div>
+                <div class="step">
+                    <h2 class="text-lg font-semibold">Paso 3: Calcular discriminante</h2>
+                    <p>\(\Delta = (-5)^2 - 4(1)(6) = 25 - 24 = 1\)</p>
+                </div>
+                <div class="step">
+                    <h2 class="text-lg font-semibold">Paso 4: Obtener soluciones</h2>
+                    <p>\(x_1 = \frac{5 + 1}{2} = 3\), \(x_2 = \frac{5 - 1}{2} = 2\)</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-8">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg"><i class="fas fa-file-pdf mr-2"></i>Exportar PDF</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"><i class="fas fa-share-alt mr-2"></i>Compartir</button>
+                <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg"><i class="fas fa-save mr-2"></i>Guardar en historial</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+</html>

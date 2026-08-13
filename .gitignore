@@ -1,9 +1,68 @@
-node_modules/
-dist/
+# Build / OS
+.DS_Store
+Thumbs.db
+
+# Java / Gradle
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.gradle
 build/
+out/
+target/
+
+# Android
+app/build/
+.idea/
+.gradle/
+local.properties
+/*.keystore
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code
+.vscode/
+
+# JetBrains
+*.iws
+*.ipr
+*.iml
+.idea/
+
+# OS generated
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# OneDrive temp files
+~$*
+
+# Gradle dist and large generated folders
+gradle-dist/
+gradle-*/
+**/gradle-dist/
+**/gradle-*/
+*.zip
+*.apk
+*.aab
+*.keystore
+
+# Frontend assets
+frontend/assets/imagenes/
+
+# Local env
 *.log
 .env
-/.idea/
-/*.zip
-/*.apk
-frontend/assets/imagenes/
+

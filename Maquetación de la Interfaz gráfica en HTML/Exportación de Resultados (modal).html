@@ -1,0 +1,22 @@
+<div id="exportModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-6 w-96">
+        <h2 class="text-xl font-bold mb-4">Exportar solución</h2>
+        <div class="mb-4">
+            <label class="block mb-2">Formato:</label>
+            <select class="w-full border rounded p-2">
+                <option>PDF con explicación detallada</option>
+                <option>Archivo LaTeX (.tex)</option>
+                <option>Imagen (PNG)</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label class="flex items-center">
+                <input type="checkbox" class="mr-2"> Incluir gráficos
+            </label>
+        </div>
+        <div class="flex justify-end gap-2">
+            <button id="closeModal" class="px-4 py-2 bg-gray-300 rounded">Cancelar</button>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded">Exportar</button>
+        </div>
+    </div>
+</div>

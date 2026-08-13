@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- ═══════════════════ DISPLAY ═══════════════════ -->
+    <LinearLayout
+        android:id="@+id/display_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:orientation="vertical"
+        android:gravity="bottom|end"
+        android:paddingHorizontal="28dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="48dp">
+
+        <!-- Expresión encadenada (historial) -->
+        <TextView
+            android:id="@+id/tv_expression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="start" />
+
+        <!-- Número principal -->
+        <TextView
+            android:id="@+id/tv_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/text_primary"
+            android:textSize="64sp"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="start"
+            android:paddingTop="6dp" />
+
+    </LinearLayout>
+
+    <!-- Línea divisoria -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <!-- ═══════════════════ BOTONES ═══════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:background="@color/bg_buttons"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp">
+
+        <!-- ── Fila 1 : AC | +/- | % | ÷ ── -->
+        <LinearLayout style="@style/BtnRow">
+            <Button android:id="@+id/btn_clear"
+                style="@style/BtnFunction"
+                android:text="AC"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_sign"
+                style="@style/BtnFunction"
+                android:text="+/-"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_percent"
+                style="@style/BtnFunction"
+                android:text="%"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_div"
+                style="@style/BtnOperator"
+                android:text="÷"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- ── Fila 2 : 7 | 8 | 9 | × ── -->
+        <LinearLayout style="@style/BtnRow">
+            <Button android:id="@+id/btn_7"
+                style="@style/BtnDigit"
+                android:text="7"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_8"
+                style="@style/BtnDigit"
+                android:text="8"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_9"
+                style="@style/BtnDigit"
+                android:text="9"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_mult"
+                style="@style/BtnOperator"
+                android:text="×"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- ── Fila 3 : 4 | 5 | 6 | - ── -->
+        <LinearLayout style="@style/BtnRow">
+            <Button android:id="@+id/btn_4"
+                style="@style/BtnDigit"
+                android:text="4"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_5"
+                style="@style/BtnDigit"
+                android:text="5"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_6"
+                style="@style/BtnDigit"
+                android:text="6"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_minus"
+                style="@style/BtnOperator"
+                android:text="−"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- ── Fila 4 : 1 | 2 | 3 | + ── -->
+        <LinearLayout style="@style/BtnRow">
+            <Button android:id="@+id/btn_1"
+                style="@style/BtnDigit"
+                android:text="1"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_2"
+                style="@style/BtnDigit"
+                android:text="2"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_3"
+                style="@style/BtnDigit"
+                android:text="3"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_plus"
+                style="@style/BtnOperator"
+                android:text="+"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- ── Fila 5 : 0(doble) | . | ⌫ | = ── -->
+        <LinearLayout style="@style/BtnRow">
+            <Button android:id="@+id/btn_0"
+                style="@style/BtnDigit"
+                android:text="0"
+                android:gravity="center_vertical|start"
+                android:paddingStart="30dp"
+                android:layout_weight="2" />
+            <Button android:id="@+id/btn_dot"
+                style="@style/BtnDigit"
+                android:text="."
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_delete"
+                style="@style/BtnOperator"
+                android:text="⌫"
+                android:layout_weight="1" />
+            <Button android:id="@+id/btn_equals"
+                style="@style/BtnEquals"
+                android:text="="
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

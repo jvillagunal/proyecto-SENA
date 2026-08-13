@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GrigoriPerelmanApp</string>
+    <string name="error_invalid_credentials">Credenciales inválidas</string>
+    <string name="error_invalid_data">Ingrese datos válidos</string>
+    <string name="error_name_required">El nombre es obligatorio</string>
+    <string name="register_success">Registro exitoso</string>
+    <string name="error_duplicate_account">Ya existe una cuenta con ese correo</string>
+    <string name="error_invalid_equation">Ingrese una ecuación válida</string>
+    <string name="error_saving_problem">Error al guardar el problema</string>
+    <string name="deleted_problem">Problema eliminado</string>
+</resources>
