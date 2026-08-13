@@ -1,0 +1,19 @@
+{
+  "name": "ga7-aa5-ev01-api",
+  "version": "1.0.0",
+  "description": "Servicio web para registro e inicio de sesión - Evidencia GA7-220501096-AA5-EV01",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "jesus",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0"
+  }
+}
