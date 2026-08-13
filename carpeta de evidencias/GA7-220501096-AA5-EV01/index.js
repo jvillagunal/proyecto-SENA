@@ -7,6 +7,7 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 8082;
@@ -17,6 +18,8 @@ const USERS_FILE = path.join(DATA_DIR, 'users.json');
 app.use(helmet());
 app.use(express.json());
 app.use(morgan('dev'));
+// Habilitar CORS para permitir peticiones desde el cliente de prueba
+app.use(cors());
 
 // Asegura que el directorio de datos exista
 if (!fs.existsSync(DATA_DIR)) {

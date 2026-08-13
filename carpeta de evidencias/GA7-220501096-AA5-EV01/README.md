@@ -24,4 +24,5 @@ npm start
 
 Notas:
 - El proyecto almacena usuarios en `data/users.json` (archivo JSON local) para simplicidad.
+
 - El código contiene comentarios explicativos según el requerimiento.
