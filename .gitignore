@@ -58,3 +58,11 @@ gradle-*/
 *.apk
 *.aab
 *.keystore
+
+# Frontend assets
+frontend/assets/imagenes/
+
+# Local env
+*.log
+.env
+

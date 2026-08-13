@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución - GrigoriPerelmánApp (Evidencia)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 font-[Inter]">
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-blue-800 text-white shadow-md">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="font-bold text-xl">GrigoriPerelmánApp</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="dashboard.html" class="hover:text-blue-200">Inicio</a>
+                    <a href="new-problem.html" class="hover:text-blue-200">Nuevo problema</a>
+                    <a href="history.html" class="hover:text-blue-200">Historial</a>
+                    <a href="profile.html" class="hover:text-blue-200">Perfil</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden bg-blue-700 p-4">
+                <a href="dashboard.html" class="block py-2">Inicio</a>
+                <a href="new-problem.html" class="block py-2">Nuevo problema</a>
+                <a href="history.html" class="block py-2">Historial</a>
+                <a href="profile.html" class="block py-2">Perfil</a>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+                <h1 class="text-2xl font-bold text-blue-800 mb-2">Solución para: <span id="equationDisplay" class="font-mono">x² - 5x + 6 = 0</span></h1>
+                <div class="border-t border-gray-200 my-4"></div>
+                <div id="stepsContainer" class="space-y-6">
+                    <!-- Steps will be inserted here -->
+                </div>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <button id="exportBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg flex items-center gap-2">Exportar PDF</button>
+                    <button id="shareBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2">Compartir</button>
+                    <button id="saveHistoryBtn" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2">Guardar en historial</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+            <p>&copy; 2026 GrigoriPerelmánApp</p>
+        </footer>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/solutions.js"></script>
+</body>
+</html>

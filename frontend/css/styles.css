@@ -1,0 +1,97 @@
+/* Copiado desde el frontend real: estilos principales */
+/* Estilos adicionales a Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mejoras de accesibilidad */
+button:focus, a:focus, input:focus, textarea:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Tamaño mínimo de toque en móviles */
+button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Animaciones suaves */
+.transition {
+    transition: all 0.2s ease;
+}
+
+/* Estilo para vista previa de LaTeX */
+#preview {
+    font-family: monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* Contenedor de pasos en solución */
+.step {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+.step:last-child {
+    border-bottom: none;
+}
+.step h3 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #1e3a8a;
+}
+.step p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+.step .math {
+    font-family: monospace;
+    background-color: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+
+/* Tarjeta de historial */
+.history-item {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.2s;
+}
+.history-item:hover {
+    background-color: #f3f4f6;
+}
+.history-equation {
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.history-date {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
+}
+.history-actions {
+    display: flex;
+    gap: 1rem;
+}
+.history-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+.history-actions .view {
+    color: #2563eb;
+}
+.history-actions .delete {
+    color: #dc2626;
+}

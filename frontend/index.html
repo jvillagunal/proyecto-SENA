@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrigoriPerelmánApp | Frontend (Evidencia)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 font-[Inter]">
+    <header class="bg-blue-800 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-xl">GrigoriPerelmánApp (Evidencia)</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="login.html" class="hover:text-blue-200">Iniciar sesión</a>
+                <a href="register.html" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700">Registrarse</a>
+            </nav>
+            <button id="mobileMenuBtn" class="md:hidden"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-blue-700 p-4">
+            <a href="login.html" class="block py-2">Iniciar sesión</a>
+            <a href="register.html" class="block py-2">Registrarse</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-800 mb-4">Frontend real integrado como evidencia</h1>
+        <p class="text-lg text-gray-700 mb-6">Abre las páginas del proyecto real dentro de esta carpeta para revisar la implementación.</p>
+        <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <a href="login.html" class="p-4 bg-white rounded-lg shadow-md">Iniciar sesión</a>
+            <a href="register.html" class="p-4 bg-white rounded-lg shadow-md">Registro</a>
+            <a href="dashboard.html" class="p-4 bg-white rounded-lg shadow-md">Dashboard</a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <p>&copy; 2026 GrigoriPerelmánApp - Evidencia</p>
+    </footer>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
